@@ -10,7 +10,7 @@
 LiquidCrystal_I2C lcd(0x27, 16, 2);
 //--------------------------------------------------------------
 //emergency phone number with country code
-const String EMERGENCY_PHONE[] = {"NUMBER1", "NUMBER2"};
+const String EMERGENCY_PHONE[] = {"+919827247999", "+917024064226", "+917773020998"};
 //--------------------------------------------------------------
 //GSM Module RX pin to Arduino 3
 //GSM Module TX pin to Arduino 2
@@ -41,7 +41,7 @@ int xaxis = 0, yaxis = 0, zaxis = 0;
 int deltx = 0, delty = 0, deltz = 0;
 int vibration = 2, devibrate = 75;
 int magnitude = 0;
-int sensitivity = 100;
+int sensitivity = 150;
 double angle;
 boolean impact_detected = false;
 //Used to run impact routine every 2mS.
@@ -71,7 +71,7 @@ void setup()
   pinMode(pin,OUTPUT);
   //--------------------------------------------------------------
   //initialize lcd screen
-  lcd.begin();
+  lcd.begin(16, 2);
   // turn on the backlight
   lcd.backlight();
   lcd.clear();
